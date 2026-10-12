@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>MyT - Team Volley C8</title>
+  <meta name="description" content="Tutto il Team Volley C8 in un'unica app">
+
+  <!-- Icone: iPhone, Android, browser -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="MyT">
+  <meta name="application-name" content="MyT">
+  <meta name="theme-color" content="#1a2a7c">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <script>
+    /* =====================================================
+       INDIRIZZO DELL'APP MyT (link /exec)
+       Se un giorno cambia, basta modificare questa riga.
+    ===================================================== */
+    var MYT_URL = 'https://script.google.com/macros/s/AKfycbyJTPp4Id5NBwOXP09u4vclqFM4UBDmNd8I-zCJ2uecQrDZFy4xzK_AXHDIkXpACFHL/exec';
+
+    // Aperta dall'icona sulla Home: si va subito all'app
+    var daHome =
+      window.navigator.standalone === true ||
+      (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) ||
+      /[?&]app=1\b/.test(location.search);
+
+    if (daHome) {
+      location.replace(MYT_URL);
+    }
+  </script>
+
+  <style>
+    :root {
+      --blu: #1a2a7c;
+      --oro: #d39b36;
+      --testo: #151a33;
+      --testo-2: #565c75;
+      --linea: #e5e7ef;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+      color: var(--testo);
+      background: radial-gradient(circle at 50% 30%, #ffffff 0%, #ffffff 40%, #eef1f9 100%);
+    }
+
+    main {
+      max-width: 440px;
+      min-height: 100vh;
+      min-height: 100dvh;
+      margin: 0 auto;
+      padding: 32px 20px calc(28px + env(safe-area-inset-bottom));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .logo {
+      width: 62vw;
+      max-width: 220px;
+      height: auto;
+      border-radius: 22%;
+      box-shadow: 0 14px 40px rgba(26, 42, 124, .18);
+    }
+
+    h1 {
+      margin: 24px 0 0;
+      font-size: 30px;
+      color: var(--blu);
+    }
+
+    .linea {
+      width: 56px;
+      height: 4px;
+      margin: 12px auto 0;
+      border-radius: 4px;
+      background: var(--oro);
+    }
+
+    .sotto {
+      margin: 12px 0 0;
+      font-size: 17px;
+      color: var(--testo-2);
+    }
+
+    .apri {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 54px;
+      margin-top: 26px;
+      border-radius: 14px;
+      background: var(--blu);
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .salva {
+      width: 100%;
+      margin-top: 22px;
+      padding: 16px;
+      border: 1px solid var(--linea);
+      border-radius: 16px;
+      background: #ffffff;
+      text-align: left;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .salva strong { color: var(--blu); }
+
+    .salva h2 {
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+
+    .salva p { margin: 0; }
+    .salva p + p { margin-top: 8px; }
+
+    .salva [hidden] { display: none; }
+  </style>
+</head>
+
+<body>
+  <main>
+    <img class="logo" src="icon-512.png" alt="MyT - Team Volley C8" width="220" height="220">
+    <h1>All in one</h1>
+    <div class="linea"></div>
+    <p class="sotto">Tutto il Team Volley C8 in un'unica app</p>
+
+    <a class="apri" id="apri" href="#">Apri MyT</a>
+
+    <section class="salva">
+      <h2>Metti MyT sulla schermata Home</h2>
+      <p id="perIphone"><strong>iPhone:</strong> tocca il pulsante <strong>Condividi</strong> di Safari e scegli <strong>"Aggiungi alla schermata Home"</strong>.</p>
+      <p id="perAndroid"><strong>Android:</strong> tocca il menu <strong>⋮</strong> di Chrome e scegli <strong>"Aggiungi a schermata Home"</strong> oppure <strong>"Installa app"</strong>.</p>
+      <p>Comparirà l'icona MyT: toccandola si apre direttamente l'app.</p>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('apri').href = MYT_URL;
+
+    // Mostra prima le istruzioni del telefono che si sta usando
+    var ua = navigator.userAgent || '';
+    if (/iPhone|iPad|iPod/i.test(ua)) document.getElementById('perAndroid').hidden = true;
+    else if (/Android/i.test(ua)) document.getElementById('perIphone').hidden = true;
+  </script>
+</body>
+</html>
