@@ -1257,6 +1257,7 @@ function mytcPulisci_(t) {
   var caricatiIl = 0;
   var inCarica = false;
   var inAttesa = [];          // domande arrivate prima dei dati
+  var motivoErrore = '';
   var DIECI_MINUTI = 10 * 60 * 1000;
 
   var ICONE = { partita: '🏐', allenamento: '💪', vinta: '🏆', persa: '🏐', persona: '👤', evento: '📅' };
@@ -1295,6 +1296,7 @@ function mytcPulisci_(t) {
     }
     function ko(e) {
         console.warn('Chat MyT: dati non caricati', e);
+        motivoErrore = String(e && e.message || e || '');
         inCarica = false;
         stato.classList.remove('carica');
         var fare = inAttesa; inAttesa = [];
@@ -1315,6 +1317,12 @@ function mytcPulisci_(t) {
         ok(d);
       };
       tag.onerror = function() { if (!finito) { finito = true; clearTimeout(limite); ko(new Error('indirizzo non raggiungibile')); } };
+      // Caricato ma senza dati: l'app ha risposto con una pagina normale
+      tag.onload = function() {
+        setTimeout(function() {
+          if (!finito) { finito = true; clearTimeout(limite); tag.remove(); ko(new Error('senza-riga')); }
+        }, 300);
+      };
       tag.src = window.MYTC_FONTE + (window.MYTC_FONTE.indexOf('?') === -1 ? '?' : '&') + 'callback=mytcRicevi&t=' + Date.now();
       document.head.appendChild(tag);
     } else {
@@ -1592,7 +1600,11 @@ function mytcPulisci_(t) {
     function rispondi(errore) {
       if (!MYTC_D) {
         fine({ testo: window.MYTC_FONTE
-          ? 'Non riesco a leggere i dati dell\'app 😕 Riprova tra qualche secondo. Se continua, nell\'app manca ancora l\'aggiornamento per la pagina a voce.'
+          ? (motivoErrore === 'senza-riga'
+            ? 'Non riesco a leggere i dati dell\'app 😕 L\'app risponde, ma non con i dati per la chat: in Codice.gs manca la riga in doGet (rispostaDatiChatMyT_) oppure non è stata fatta la Nuova versione del deployment.'
+            : /^dati non disponibili/.test(motivoErrore)
+              ? 'L\'app ha provato a darmi i dati ma è andata in errore 😕 Dettaglio per chi la gestisce: ' + motivoErrore
+              : 'Non riesco a leggere i dati dell\'app 😕 (' + (motivoErrore || 'nessuna risposta') + '). Controlla che il deployment sia per "Chiunque" e riprova.')
           : 'Non riesco a collegarmi in questo momento 😕 Controlla la connessione e riprova.', suggerimenti: [t] });
         caricaDati();
         return;
