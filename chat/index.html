@@ -1302,10 +1302,21 @@ function mytcPulisci_(t) {
     }
     if (window.MYTC_FONTE) {
       // Pagina vocale: i dati arrivano dall'indirizzo pubblico della app
-      fetch(window.MYTC_FONTE, { redirect: 'follow' })
-        .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-        .then(function(d) { if (!d || !d.eventi) throw new Error('dati vuoti'); ok(d); })
-        .catch(ko);
+      // JSONP: un <script> che chiama mytcRicevi(dati). Funziona anche su iPhone.
+      var finito = false;
+      var tag = document.createElement('script');
+      var limite = setTimeout(function() { if (!finito) { finito = true; tag.remove(); ko(new Error('tempo scaduto')); } }, 30000);
+      window.mytcRicevi = function(d) {
+        if (finito) return;
+        finito = true;
+        clearTimeout(limite);
+        tag.remove();
+        if (!d || !d.eventi) { ko(new Error(d && d.errore || 'dati vuoti')); return; }
+        ok(d);
+      };
+      tag.onerror = function() { if (!finito) { finito = true; clearTimeout(limite); ko(new Error('indirizzo non raggiungibile')); } };
+      tag.src = window.MYTC_FONTE + (window.MYTC_FONTE.indexOf('?') === -1 ? '?' : '&') + 'callback=mytcRicevi&t=' + Date.now();
+      document.head.appendChild(tag);
     } else {
       google.script.run.withSuccessHandler(ok).withFailureHandler(ko).datiChatMyT();
     }
@@ -1400,7 +1411,9 @@ function mytcPulisci_(t) {
   function micBloccato() {
     rispostaMyT({
       testo: window.MYTC_FONTE
-        ? 'Il microfono è bloccato 😕 Tocca il lucchetto accanto all\'indirizzo, scegli Microfono: Consenti e riprova. Oppure usa il 🎤 della tastiera.'
+        ? (/iPhone|iPad|iPod/i.test(navigator.userAgent)
+          ? 'Il microfono è bloccato 😕 Su iPhone serve:\n1. Impostazioni → Generali → Tastiera → "Abilita dettatura" acceso (e Siri attivo).\n2. In Safari tocca "aA" accanto all\'indirizzo → Impostazioni sito web → Microfono → Consenti.\nPoi ricarica la pagina. Intanto puoi usare il 🎤 della tastiera.'
+          : 'Il microfono è bloccato 😕 Tocca il lucchetto accanto all\'indirizzo, scegli Microfono: Consenti e ricarica la pagina. Intanto puoi usare il 🎤 della tastiera.')
         : 'Su questo telefono il microfono qui dentro è bloccato 😕 Tocca la casella e usa il 🎤 della tastiera per dettare la domanda: poi premi invio.'
     });
   }
@@ -1578,7 +1591,10 @@ function mytcPulisci_(t) {
 
     function rispondi(errore) {
       if (!MYTC_D) {
-        fine({ testo: 'Non riesco a collegarmi in questo momento 😕 Controlla la connessione e riprova.', suggerimenti: [t] });
+        fine({ testo: window.MYTC_FONTE
+          ? 'Non riesco a leggere i dati dell\'app 😕 Riprova tra qualche secondo. Se continua, nell\'app manca ancora l\'aggiornamento per la pagina a voce.'
+          : 'Non riesco a collegarmi in questo momento 😕 Controlla la connessione e riprova.', suggerimenti: [t] });
+        caricaDati();
         return;
       }
       var r;
