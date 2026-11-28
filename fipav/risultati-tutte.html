@@ -1,0 +1,1149 @@
+<!--
+CId=
+StId=2396
+-->
+
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link href="/js/jquery/jquery-ui.css" type="text/css" rel="stylesheet" /><link href="/css/base.min.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" type="text/css" href="/css/modal-menu.css" /><link rel="stylesheet" type="text/css" href="/js/lightslider/css/lightslider.css" /><link rel="stylesheet" type="text/css" href="/js/slicknav/slicknav.css" /><link rel="stylesheet" type="text/css" href="/js/slicknav/slicknav-style.css" /><link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.ashx" />
+
+    <script src="/js/jquery/jquery-3.1.0.min.js"></script>
+    <script src="/js/jquery/jquery-ui.js"></script>
+    <script type="text/javascript">
+        jQuery.noConflict();
+    </script>
+    <script src="/js/mootools-core-1.5.1.js" type="text/javascript"></script>
+    <script src="/js/mootools-more-1.5.1.js" type="text/javascript"></script>
+    <!--[if (gte IE 6)&(lte IE 8)]>
+      <script type="text/javascript" src="/js/selectivizr.js?nocache=20141120a"></script>
+    <![endif]-->
+    <script type="text/javascript" src="/js/checkform.js?nocache=20160616a"></script>
+    <script type="text/javascript" src="/js/jsManager.js?nocache=20160708a"></script>
+    <script type="text/javascript" src="/js/slideshow.js?nocache=20141120a"></script>
+    <script type="text/javascript" src="/js/MenuMatic_0.68.4.js?nocache=20160616a"></script>
+    <script type="text/javascript" src="/js/cerabox/cerabox.min.js?nocache=20141120a"></script>
+    <script type="text/javascript" src="/js/mediabox/mediaboxAdvanced.js?nocaches=2023"></script>
+    <script type="text/javascript" src="/js/DatePicker/DatePickerFull.js?nocache=20141120a"></script>
+    <script type="text/javascript" src="/js/lightslider/js/lightslider.js"></script>
+    <script type="text/javascript" src="/js/slicknav/jquery.slicknav.min.js"></script>
+    
+    <script type="text/javascript">
+        Locale.use('it-IT');
+
+        window.addEvent('load', function () {
+            equalize('#layout-area2, #layout-area3, #layout-area4');
+            equalize('#layout-area3 .col');
+            $$('.popup-image').cerabox({ group: false, displayTitle: false });
+
+            jQuery('.cerabox-close').click(function () {
+                jQuery('body').css('overflow','')
+            })
+            //console.log('');
+
+
+          
+          getMyBingMaps();
+
+        });
+        window.addEvent('domready', function () {
+            paginazioneBoxAfter();
+
+        });
+        function paginazioneBoxAfter() {
+            $$('.box-file-multipli').cerabox({ group: false, displayTitle: true, mobileView: false });
+            $$('.box-page-ricerca-multipli').cerabox({ group: false, displayTitle: true, mobileView: false });
+            $$('.box-rassegna-multipli').cerabox({ group: false, displayTitle: true, mobileView: false });
+            $$('.aps-cer').cerabox({ group: false, displayTitle: true, mobileView: false });
+        }
+
+    </script>
+
+
+
+    
+    <script type="text/javascript">
+        function Stagione(SId) {
+            CaricaPaginaGet('/risultati-classifiche.aspx?act=settimana', 'SId=' + SId, 'lbSettimana');
+            CaricaPaginaGet('/risultati-classifiche.aspx?act=campionato', 'SId=' + SId, 'lbCampionato', 'Campionato(' + SId + ', \'\');');
+        }
+        function Campionato(SId, CId) {
+            CaricaPaginaGet('/risultati-classifiche.aspx?act=societa', 'SId=' + SId + '&CId=' + CId, 'lbSocieta');
+        }
+        function EsportaXls(ff) {
+            var pp = window.open('about:blank', 'popXls');
+            ff.target = 'popXls';
+            var xAction = ff.action;
+            ff.action = 'esporta-risultati.aspx';
+            ff.submit();
+            ff.target = '';
+            ff.action = xAction;
+            pp.focus();
+        }
+    </script>
+<link href="/files/95/0/Css/17/stile.css" type="text/css" rel="stylesheet" /><meta property="og:title" content="FIPAV - Comitato Regionale Trentino | Risultati e classifiche" /><meta property="og:type" content="article" /><meta property="og:url" content="https://www.fipav.tn.it/risultati-classifiche.aspx?ComitatoId=16&amp;StId=2396&amp;DataDa=&amp;StatoGara=&amp;CId=&amp;SId=844&amp;PId=110&amp;btFiltro=CERCA" /><meta property="og:image" content="http://www.fipav.tn.it/files/95/Logo/" /><meta property="og:site_name" content="FIPAV - Comitato Regionale Trentino" /><meta property="og:description" content="" /><meta property="fb:app_id" content="576743645751508" /><title>
+	FIPAV - Comitato Regionale Trentino | Risultati e classifiche
+</title></head>
+<body>
+    
+	
+<div id="layout-container" class=" desktop clsP_110">
+	<div id="layout-area1" style="width:100%">
+		<div class="col col-4">
+			
+<div id="BoxId_9097" name="BoxId_9097" class="box box-4">
+	<div class=""style="background: transparent;"><div class="box-menu-back"><div class="box-menu menu-horizontal" id="box_menu_hor_9097" style="height: 45px;">
+<ul id="nav">
+	<li><a href="/homepage">Homepage</a></li>
+	<li><a href="#" onclick="return false;">Organizzazione</a>
+<ul>
+	<li><a href="/pagina.aspx?PId=123">Consiglio</a></li>
+	<li><a href="/pagina.aspx?PId=25577">Decisioni del Consiglio</a></li>
+	<li><a href="/pagina.aspx?PId=8838">Aree di competenza</a></li>
+	<li><a href="/pagina.aspx?PId=9469">Staff tecnici</a></li>
+	<li><a href="/pagina.aspx?PId=124">Orari e contatti struttura</a></li>
+	<li><a href="/pagina.aspx?PId=13135">Planning stagionale</a></li>
+	<li><a href="/pagina.aspx?PId=13420">Bilancio d'esercizio</a></li>
+	<li><a href="/pagina.aspx?PId=32512">Info operative</a></li></ul></li>
+	<li><a class="current" href="#" onclick="return false;">Campionati</a>
+<ul>
+	<li><a class="current" href="/risultati-classifiche.aspx?PId=110">Gare</a></li>
+	<li><a href="/spostamenti-gare.aspx?PId=113">Spostamenti</a></li>
+	<li><a href="/pagina.aspx?PId=232">Indizioni</a></li>
+	<li><a href="#" onclick="return false;">Calendari</a>
+<ul>
+	<li><a href="/pagina.aspx?PId=40632">Stagione sportiva 2026/2027</a></li>
+	<li><a href="/pagina.aspx?PId=29061">Stagione sportiva 2025/2026</a></li>
+	<li><a href="/pagina.aspx?PId=17210">Stagione Sportiva 2024/2025</a></li>
+	<li><a href="/pagina.aspx?PId=16569">Stagione Sportiva 2023/2024</a></li>
+	<li><a href="/pagina.aspx?PId=15548">Stagione sportiva 2022/2023</a></li>
+	<li><a href="/pagina.aspx?PId=14923">Stagione Sportiva 2021/2022</a></li>
+	<li><a href="/pagina.aspx?PId=14061">Stagione Sportiva 2020/2021</a></li></ul></li>
+	<li><a href="#" onclick="return false;">Albo d'oro</a>
+<ul>
+	<li><a href="/pagina.aspx?PId=13776">Stagione Sportiva 2018/2019</a></li>
+	<li><a href="/pagina.aspx?PId=9309">Stagione Sportiva 2016/2017</a></li>
+	<li><a href="/pagina.aspx?PId=7349">Stagione Sportiva 2015/2016</a></li>
+	<li><a href="/pagina.aspx?PId=2534">Stagione Sportiva 2014/2015</a></li>
+	<li><a href="/pagina.aspx?PId=430">Stagione Sportiva 2013/2014</a></li>
+	<li><a href="/pagina.aspx?PId=325">Stagione Sportiva 2012/2013</a></li>
+	<li><a href="/pagina.aspx?PId=326">Stagione Sportiva 2011/2012</a></li>
+	<li><a href="/pagina.aspx?PId=327">Stagione Sportiva 2010/2011</a></li>
+	<li><a href="/pagina.aspx?PId=329">Stagione Sportiva 2009/2010</a></li>
+	<li><a href="/pagina.aspx?PId=330">Stagione Sportiva 2008/2009</a></li>
+	<li><a href="/pagina.aspx?PId=331">Stagione Sportiva 2007/2008</a></li></ul></li></ul></li>
+	<li><a href="/comunicati.aspx?PId=114">Albo Comunicati</a></li>
+	<li><a href="/elenco-societa.aspx?PId=115">Società</a></li>
+	<li><a href="#" onclick="return false;">Allenatori</a>
+<ul>
+	<li><a href="/elenco-allenatori.aspx?PId=117">Elenco allenatori</a></li></ul></li>
+	<li><a href="#" onclick="return false;">Settori Tecnici</a>
+<ul>
+	<li><a href="/pagina.aspx?PId=127">Settore Allenatori</a></li>
+	<li><a href="/pagina.aspx?PId=221">Arbitri e Segnapunti</a>
+<ul>
+	<li><a href="/corso_arbitri">Corso Arbitri</a></li></ul></li>
+	<li><a href="/pagina.aspx?PId=13147">Beach Volley</a></li>
+	<li><a href="/pagina.aspx?PId=223">Dirigenti</a></li>
+	<li><a href="/pagina.aspx?PId=224">Dispense</a></li>
+	<li><a href="/pagina.aspx?PId=225">Scuola e VolleyS3</a></li>
+	<li><a href="/pagina.aspx?PId=31953">Settore Qualificazione</a></li></ul></li>
+	<li><a href="/gallery-foto.aspx?PId=119">Photo gallery</a></li>
+	<li><a href="/pagina.aspx?PId=332">Links</a></li>
+	<li><a href="#" onclick="return false;">News</a>
+<ul>
+	<li><a href="/news.aspx?PId=249">Archivio News</a></li></ul></li>
+	<li><a href="/pallavolo-dove.aspx?PId=9390">Pallavolo dove?</a></li>
+	<li><a href="#" onclick="return false;">Modulistica</a>
+<ul>
+	<li><a href="/pagina.aspx?PId=34053">Richieste Contribuzioni</a></li></ul></li></ul></div></div>
+
+<script type="text/javascript">
+//<![CDATA[
+if(document.getElementById('nav')){var myMenu = new MenuMatic({ matchWidthMode: true, hideDelay: 200, stretchMainMenu:true });$('box_menu_hor_9097').setStyle('height','');}
+// ]]>
+</script>
+	</div>
+</div>
+			
+<div id="BoxId_9100" name="BoxId_9100" class="box box-4">
+	<div class=""style="background: transparent;">
+		<div class="box-banner-container">
+			<div id="box-banner-9100" class="box-banner-rotate" style="width: 100%;">
+				<a class="box-banner-slide popup-image" href="/files/95/0/Link/Banner testata/n-azzurro.png"  title="Banner testata 3" target="_blank"><img src="/files/95/0/Link/Banner testata/n-azzurro.png" alt="Banner testata 3" /></a>
+			</div>
+		</div>
+<script type="text/javascript">
+	//<![CDATA[
+	BoxBanner('img', 9100, 'crossFade', true,5000, 1);
+	//]]>
+</script>
+	</div>
+</div>
+		</div>
+	</div>
+	<div id="layout-area-corpo">
+	<div id="layout-area3" style="width:100%">
+		<div class="col col-4">
+	<h1>Risultati e classifiche delle gare</h1>
+<div id="BoxId_9099" class="box box-4">
+	<div class="box-padding">
+	<form id="filtro" method="get" action="/risultati-classifiche.aspx">
+		<input type="hidden" name="ComitatoId" value="16">
+		<label>
+			Stagione sportiva:<br />
+			<select name="StId" tabindex="1" class="input-select" onchange="Stagione(this.options[this.selectedIndex].value)">
+				<option value="2396" selected="selected">Stagione Sportiva 2026 / 2027</option>
+				<option value="2278">Stagione Sportiva 2025 / 2026</option>
+				<option value="2159">Stagione Sportiva 2024 / 2025</option>
+				<option value="2041">Stagione Sportiva 2023 / 2024</option>
+				<option value="1923">Stagione Sportiva 2022 / 2023</option>
+				<option value="1804">Stagione Sportiva 2021 / 2022</option>
+				<option value="1685">Stagione Sportiva 2020 / 2021</option>
+				<option value="1566">Stagione Sportiva 2019 / 2020</option>
+				<option value="1447">Stagione Sportiva 2018 / 2019</option>
+				<option value="1328">Stagione Sportiva 2017 / 2018</option>
+				<option value="1209">Stagione Sportiva 2016 / 2017</option>
+				<option value="1090">Stagione Sportiva 2015 / 2016</option>
+				<option value="956">Stagione Sportiva 2014 / 2015</option>
+				<option value="837">Stagione Sportiva 2013 / 2014</option>
+				<option value="718">Stagione Sportiva 2012 / 2013</option>
+				<option value="599">Stagione Sportiva 2011 / 2012</option>
+				<option value="138">Stagione Sportiva 2010 / 2011</option>
+				<option value="102">Stagione Sportiva 2009 / 2010</option>
+				<option value="66">Stagione Sportiva 2008 / 2009</option>
+				<option value="39">Stagione Sportiva 2007 / 2008</option>
+			</select>
+		</label>
+		<label id="lbSettimana">
+			Settimana: <br />
+			<select name="DataDa" class="input-select" tabindex="2">
+				<option value="">Tutte le date..</option>
+				<option value="01/07/2026">dal 01/07/2026 al 05/07/2026</option>
+				<option value="06/07/2026">dal 06/07/2026 al 12/07/2026</option>
+				<option value="13/07/2026">dal 13/07/2026 al 19/07/2026</option>
+				<option value="20/07/2026">dal 20/07/2026 al 26/07/2026</option>
+				<option value="27/07/2026">dal 27/07/2026 al 02/08/2026</option>
+				<option value="03/08/2026">dal 03/08/2026 al 09/08/2026</option>
+				<option value="10/08/2026">dal 10/08/2026 al 16/08/2026</option>
+				<option value="17/08/2026">dal 17/08/2026 al 23/08/2026</option>
+				<option value="24/08/2026">dal 24/08/2026 al 30/08/2026</option>
+				<option value="31/08/2026">dal 31/08/2026 al 06/09/2026</option>
+				<option value="07/09/2026">dal 07/09/2026 al 13/09/2026</option>
+				<option value="14/09/2026">dal 14/09/2026 al 20/09/2026</option>
+				<option value="21/09/2026">dal 21/09/2026 al 27/09/2026</option>
+				<option value="28/09/2026">dal 28/09/2026 al 04/10/2026</option>
+				<option value="05/10/2026">dal 05/10/2026 al 11/10/2026</option>
+				<option value="12/10/2026">dal 12/10/2026 al 18/10/2026</option>
+				<option value="19/10/2026">dal 19/10/2026 al 25/10/2026</option>
+				<option value="26/10/2026">dal 26/10/2026 al 01/11/2026</option>
+				<option value="02/11/2026">dal 02/11/2026 al 08/11/2026</option>
+				<option value="09/11/2026">dal 09/11/2026 al 15/11/2026</option>
+				<option value="16/11/2026">dal 16/11/2026 al 22/11/2026</option>
+				<option value="23/11/2026">dal 23/11/2026 al 29/11/2026</option>
+				<option value="30/11/2026">dal 30/11/2026 al 06/12/2026</option>
+				<option value="07/12/2026">dal 07/12/2026 al 13/12/2026</option>
+				<option value="14/12/2026">dal 14/12/2026 al 20/12/2026</option>
+				<option value="21/12/2026">dal 21/12/2026 al 27/12/2026</option>
+				<option value="28/12/2026">dal 28/12/2026 al 03/01/2027</option>
+				<option value="04/01/2027">dal 04/01/2027 al 10/01/2027</option>
+				<option value="11/01/2027">dal 11/01/2027 al 17/01/2027</option>
+				<option value="18/01/2027">dal 18/01/2027 al 24/01/2027</option>
+				<option value="25/01/2027">dal 25/01/2027 al 31/01/2027</option>
+				<option value="01/02/2027">dal 01/02/2027 al 07/02/2027</option>
+				<option value="08/02/2027">dal 08/02/2027 al 14/02/2027</option>
+				<option value="15/02/2027">dal 15/02/2027 al 21/02/2027</option>
+				<option value="22/02/2027">dal 22/02/2027 al 28/02/2027</option>
+				<option value="01/03/2027">dal 01/03/2027 al 07/03/2027</option>
+				<option value="08/03/2027">dal 08/03/2027 al 14/03/2027</option>
+				<option value="15/03/2027">dal 15/03/2027 al 21/03/2027</option>
+				<option value="22/03/2027">dal 22/03/2027 al 28/03/2027</option>
+				<option value="29/03/2027">dal 29/03/2027 al 04/04/2027</option>
+				<option value="05/04/2027">dal 05/04/2027 al 11/04/2027</option>
+				<option value="12/04/2027">dal 12/04/2027 al 18/04/2027</option>
+				<option value="19/04/2027">dal 19/04/2027 al 25/04/2027</option>
+				<option value="26/04/2027">dal 26/04/2027 al 02/05/2027</option>
+				<option value="03/05/2027">dal 03/05/2027 al 09/05/2027</option>
+				<option value="10/05/2027">dal 10/05/2027 al 16/05/2027</option>
+				<option value="17/05/2027">dal 17/05/2027 al 23/05/2027</option>
+				<option value="24/05/2027">dal 24/05/2027 al 30/05/2027</option>
+				<option value="31/05/2027">dal 31/05/2027 al 06/06/2027</option>
+				<option value="07/06/2027">dal 07/06/2027 al 13/06/2027</option>
+				<option value="14/06/2027">dal 14/06/2027 al 20/06/2027</option>
+				<option value="21/06/2027">dal 21/06/2027 al 27/06/2027</option>
+				<option value="28/06/2027">dal 28/06/2027 al 30/06/2027</option>
+			</select>
+		</label>
+		<label class="size-0_5">
+			Stato gara:<br />
+			<select name="StatoGara" class="input-select-0_5" tabindex="3">
+				<option value="">Tutti..</option>
+				<option value="1">Disputate</option>
+				<option value="0">Da disputare</option>
+			</select>
+		</label>
+		<label id="lbCampionato" class="size-3">
+			Campionato:<br />
+			<select name="CId" class="input-select-3" tabindex="4" onchange="Campionato(2396, this.options[this.selectedIndex].value)">
+					<option value="">Tutti i campionati..</option>
+				</optgroup>
+				<optgroup label="1^ Divisione Femminile">
+					<option value="93531">1^ Divisione Femminile - 1a Fase</option>
+				</optgroup>
+				<optgroup label="1^ Divisione Maschile">
+					<option value="93532">1^ Divisione M - Prima Fase</option>
+				</optgroup>
+				<optgroup label="2^ Divisione Femminile ">
+					<option value="93533">2^ Divisione F - Prima Fase</option>
+				</optgroup>
+				<optgroup label="3^ Divisione Femminile ">
+					<option value="93534">3^ Divisione F - Prima Fase</option>
+				</optgroup>
+				<optgroup label="Coppa Province/F">
+					<option value="93508">Coppa Province - Girone A</option>
+					<option value="93509">Coppa Province - Girone B</option>
+					<option value="93510">Coppa Province - Girone C</option>
+					<option value="94629">Coppa Province/F - Ottavi di Finale</option>
+				</optgroup>
+				<optgroup label="Coppa TAA/F ">
+					<option value="93078">Coppa TAA/F - Girone A</option>
+					<option value="93079">Coppa TAA/F - Girone B</option>
+					<option value="93080">Coppa TAA/F - Girone C</option>
+					<option value="93081">Coppa TAA/F - Girone D</option>
+					<option value="94139">Coppa TAA/F - Ottavi di Finale</option>
+				</optgroup>
+				<optgroup label="Coppa TAA/M">
+					<option value="93082">Coppa TAA/M - Girone A</option>
+					<option value="93083">Coppa TAA/M - Girone B</option>
+					<option value="94625">Coppa TAA/M - Quarti di Finale</option>
+				</optgroup>
+				<optgroup label="Coppa Trentino U12/F 6x6">
+					<option value="94062">Coppa Trentino U12/F 6x6</option>
+				</optgroup>
+				<optgroup label="Coppa Trentino U13/F 6x6">
+					<option value="93670">Coppa Trentino U13/F 6x6 - Girone A</option>
+					<option value="93671">Coppa Trentino U13/F 6x6 - Girone B</option>
+				</optgroup>
+				<optgroup label="Coppa Trentino U13/M 6x6">
+					<option value="93672">Coppa Trentino U13/M 6x6</option>
+				</optgroup>
+				<optgroup label="Serie C/F">
+					<option value="93535">Serie C/F - Prima Fase</option>
+				</optgroup>
+				<optgroup label="Serie C/M">
+					<option value="93536">Serie C/M - Prima Fase</option>
+				</optgroup>
+				<optgroup label="Serie D/F">
+					<option value="93537">Serie D/F - Prima Fase</option>
+				</optgroup>
+				<optgroup label="Serie D/M">
+					<option value="93538">Serie D/M - Prima Fase</option>
+				</optgroup>
+				<optgroup label="Under 14/F">
+					<option value="93539">U14/F - 1a Fase Girone A</option>
+					<option value="93540">U14/F - 1a Fase Girone B</option>
+					<option value="93541">U14/F - 1a Fase Girone C</option>
+				</optgroup>
+				<optgroup label="Under 14/M  ">
+					<option value="93613">U14/M - 1a Fase </option>
+				</optgroup>
+				<optgroup label="Under 15/F">
+					<option value="93542">U15/F - 1A Fase Girone A</option>
+					<option value="93543">U15/F - 1A Fase Girone B</option>
+					<option value="93544">U15/F - 1A Fase Girone C</option>
+				</optgroup>
+				<optgroup label="Under 15/M ">
+					<option value="93612">U15/M - Prima Fase</option>
+				</optgroup>
+				<optgroup label="Under 17/F">
+					<option value="93545">U17/F - 1a Fase Girone A</option>
+					<option value="93546">U17/F - 1a Fase Girone B</option>
+				</optgroup>
+				<optgroup label="Under 17/M ">
+					<option value="93611">U17/M - Prima Fase</option>
+				</optgroup>
+				<optgroup label="Under 19/F">
+					<option value="93547">U19/F - Prima Fase</option>
+				</optgroup>
+				<optgroup label="Under 19/M ">
+					<option value="93610">U19/M - Prima Fase</option>
+			</select>
+		</label>
+		<label id="lbSocieta" class="size-2">
+			Società:<br />
+			<select name="SId" class="input-select-2" tabindex="5">
+					<option value="">Tutte le societ&agrave;..</option>
+					<option value="1492">A.S.V. TRAMIN VOLLEYBALL</option>
+					<option value="2954">ACME SPORT TRIDENTUM</option>
+					<option value="820">ANAUNE PALLAVOLO</option>
+					<option value="837">ARGENTARIO CALISIO VOLLEY</option>
+					<option value="826">ARGENTARIO PALLAVOLO</option>
+					<option value="4145">ASC PASSEIER VOLLEYBALL</option>
+					<option value="1495">ASC SCHLANDERS RAIFFEISEN</option>
+					<option value="832">ASD BASILISCO VOLLEY</option>
+					<option value="827">ASD LAGARIS VOLLEY</option>
+					<option value="829">ASD PREDAIA</option>
+					<option value="2622">ASD SPORT TEAM SÜDTIROL VOLLEY</option>
+					<option value="842">ATA TRENTO VOLLEY</option>
+					<option value="817">AUSUGUM</option>
+					<option value="831">BASSA VALLAGARINA</option>
+					<option value="1192">BRENTA VOLLEY</option>
+					<option value="825">C9 ARCO RIVA</option>
+					<option value="1191">CASTEL STENICO</option>
+					<option value="5422">CUS TRENTO</option>
+					<option value="834">DOLASIANA</option>
+					<option value="1235">DREAM</option>
+					<option value="848">FIEMME FASSA</option>
+					<option value="1288">FORNACE VOLLEY</option>
+					<option value="840">I.C.S TRIDENTUM ASD</option>
+					<option value="833">LAKES LEVICO-CALDONAZZO VOLLEY</option>
+					<option value="822">MARZOLA</option>
+					<option value="1190">MORI S. STEFANO</option>
+					<option value="2993">NEUMARKT VOLLEY ASD</option>
+					<option value="821">PALLAVOLO  LIZZANA</option>
+					<option value="1229">PALLAVOLO PINE' A.S.D.</option>
+					<option value="830">PERGINE VOLLEY ALTA VALSUGANA VOLLEY</option>
+					<option value="841">PODISTICA NOVELLA</option>
+					<option value="5023">POOL VOLLEY BOLZANO BOZEN ASD</option>
+					<option value="1300">PROMOVOLLEY</option>
+					<option value="1498">S.S.V. BRUNECK A.S.D.</option>
+					<option value="835">SAN GIORGIO</option>
+					<option value="2955">SOCIETA' SPORTIVA ALDENO</option>
+					<option value="838">SOPRAMONTE</option>
+					<option value="1195">SPORTCLUB NEUGRIES</option>
+					<option value="5423">SPORTS CLUB BOLGHERA</option>
+					<option value="854">SSV BOZEN VOLLEY</option>
+					<option value="5779">SSV BRIXEN A.D.</option>
+					<option value="1357">SV LANA RAIKA</option>
+					<option value="844" selected="selected">TEAMVOLLEY C8</option>
+					<option value="1576">TORREFRANCA MATTARELLO ASD</option>
+					<option value="1205">TREMALZO</option>
+					<option value="845">TRENTINO VOLLEY Srl SSD</option>
+					<option value="1305">U.S.D. VIGOLANA</option>
+					<option value="823">US LAVIS</option>
+					<option value="1198">VAL DI CEMBRA VOLLEY</option>
+					<option value="828">VOLANO VOLLEY A.S.D.</option>
+					<option value="819">VOLLEY MEZZOLOMBARDO</option>
+					<option value="1490">VOLLEY TEAM S. GIACOMO AGRUZZO</option>
+					<option value="1228">VOLLEY VALLE DEI LAGHI</option>
+					<option value="1194">VOLLEYBALL UEBERETSCH</option>
+			</select>
+		</label>
+		<label class="size-0_5">
+			&nbsp;<br />
+			<input type="hidden" name="PId" value="110" />
+			<input type="submit" name="btFiltro" value="CERCA" class="button bt-search" style="width:100px;" />
+		</label>
+		<label class="size-0_5">
+			&nbsp;<br />
+			<input type="button" name="btXls" onclick="EsportaXls(this.form);" value="Esporta" class="button bt-excel" style="width:100px;" />
+		</label>
+	</form>
+<table class="tbl tbl-risultati">
+	<caption>2^ Divisione F - Prima Fase<a style="margin-left:10px;" target="_blank" title="Aggiungi calendario gare a Google Calendar" href="https://www.portalefipav.net/CalendarioGare.asp?c=3E0B3E23273127312F2337013B736E6B7D6C7D" class="link_calendar"><img style="width:20px;" src="/img/icone/calendar.png" alt="calendario"></a><a href="/classifica.aspx?CId=93533" class="link_classifica"><img src="/img/classifica.gif" alt="classifica"></a></caption>
+	<thead>
+		<tr>
+			<th style="width:40px;">Gara</th>
+			<th style="width:20px;" title="Giornata">G</th>
+			<th style="width:90px;">Data / ora</th>
+			<th style="width:320px;">Squadra casa</th>
+			<th style="width:320px;">Squadra ospite</th>
+			<th style="width:50px;" title="Risultato">Risul.</th>
+			<th class="isMobile">Dettagli</th>
+			<th style="width:40px;">&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="text-align:center">587</td>
+			<td style="text-align:center">1</td>
+			<td style="text-align:center">24/10/26 18:00</td>
+			<td title="C9 ARCO RIVA"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/825/Loghi/LogoS825.png" alt="">C9 GCA ASSICURAZIONI SRL</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645205">0 - 3</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645205"><span class="parziali">14-25</span><span class="parziali">20-25</span><span class="parziali">13-25</span></td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645205"><img src="/img/statogara/stato5.png" class="tips ris-img" alt="statogara" title="gara omologata" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Pal.Polo Scol.Rione Degasperi&lt;/b&gt;&lt;br /&gt;Arco RIVA DEL GARDA TN&lt;br /&gt;Via Grez n&#176; 7&lt;/p&gt;&lt;p class=&quot;designazione&quot;&gt;Arbitro designato&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr class="dispari">
+			<td style="text-align:center">592</td>
+			<td style="text-align:center">2</td>
+			<td style="text-align:center">31/10/26 18:00</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td title="ARGENTARIO PALLAVOLO"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/826/Loghi/LogoS826.png" alt="">ARGENTARIO VOLLEI JUNIOR</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645210">3 - 1</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645210"><span class="parziali">25-13</span><span class="parziali">25-22</span><span class="parziali">15-25</span><span class="parziali">25-13</span></td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645210"><img src="/img/statogara/stato5.png" class="tips ris-img" alt="statogara" title="gara omologata" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Palazz. Com. Palastor&lt;/b&gt;&lt;br /&gt; STORO TN&lt;br /&gt;Via C. Battisti 50&lt;/p&gt;&lt;p class=&quot;designazione&quot;&gt;Arbitro designato&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">597</td>
+			<td style="text-align:center">3</td>
+			<td style="text-align:center">07/11/26 18:00</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td title="LAKES LEVICO-CALDONAZZO VOLLEY"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/833/Loghi/LogoS833.png" alt="">LAKES LEVICO-CALDONAZZO</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645215">3 - 1</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645215"><span class="parziali">25-18</span><span class="parziali">22-25</span><span class="parziali">25-22</span><span class="parziali">25-21</span></td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645215"><img src="/img/statogara/stato5.png" class="tips ris-img" alt="statogara" title="gara omologata" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Palazz. Com. Palastor&lt;/b&gt;&lt;br /&gt; STORO TN&lt;br /&gt;Via C. Battisti 50&lt;/p&gt;&lt;p class=&quot;designazione&quot;&gt;Arbitro designato&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr class="dispari">
+			<td style="text-align:center">602</td>
+			<td style="text-align:center">4</td>
+			<td style="text-align:center">14/11/26 18:00</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td title="PALLAVOLO  LIZZANA"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/821/Loghi/LogoS821.png" alt="">P.LIZZANA FARMACIA THALER</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645220">3 - 0</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645220"><span class="parziali">25-15</span><span class="parziali">25-23</span><span class="parziali">25-18</span></td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645220"><img src="/img/statogara/stato5.png" class="tips ris-img" alt="statogara" title="gara omologata" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Palazz. Com. Palastor&lt;/b&gt;&lt;br /&gt; STORO TN&lt;br /&gt;Via C. Battisti 50&lt;/p&gt;&lt;p class=&quot;designazione&quot;&gt;Arbitro designato&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">605</td>
+			<td style="text-align:center">5</td>
+			<td style="text-align:center">18/11/26 20:30</td>
+			<td title="VOLANO VOLLEY A.S.D."><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/828/Loghi/LogoS828.jpg" alt="">VOLANO VOLLEY</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645223">0 - 3</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645223"><span class="parziali">13-25</span><span class="parziali">21-25</span><span class="parziali">16-25</span></td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645223"><img src="/img/statogara/stato5.png" class="tips ris-img" alt="statogara" title="gara omologata" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Pal. Comunale &lt;/b&gt;&lt;br /&gt; VOLANO TN&lt;br /&gt;Via Zucchelli 29&lt;/p&gt;&lt;p class=&quot;designazione&quot;&gt;Arbitro designato&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr class="dispari">
+			<td style="text-align:center">610</td>
+			<td style="text-align:center">6</td>
+			<td style="text-align:center">05/12/26 18:00</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td title="SAN GIORGIO"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/835/Loghi/LogoS835.jpg" alt="">CENTRO STUDI WALTER</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645228">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645228">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645228"><img src="/img/statogara/statodesignata.png" class="tips ris-img" alt="statogara" title="da disputare&lt;br /&gt;Arbitro designato" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Palazz. Com. Palastor&lt;/b&gt;&lt;br /&gt; STORO TN&lt;br /&gt;Via C. Battisti 50&lt;/p&gt;&lt;p class=&quot;designazione&quot;&gt;Arbitro designato&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">614</td>
+			<td style="text-align:center">7</td>
+			<td style="text-align:center">12/12/26 18:00</td>
+			<td title="FIEMME FASSA"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/theme/newb/no-image.png" alt="">FFV PASTIFICIO FELICETTI </td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645232">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645232">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645232"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Pal. Ist. Scolastico&lt;/b&gt;&lt;br /&gt; PREDAZZO TN&lt;br /&gt;Via Minghetti&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr class="dispari">
+			<td style="text-align:center">619</td>
+			<td style="text-align:center">8</td>
+			<td style="text-align:center">19/12/26 18:00</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td title="DOLASIANA"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/834/Loghi/LogoS834.jpg" alt="">USD DOLASIANA</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645237">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645237">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645237"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Palazz. Com. Palastor&lt;/b&gt;&lt;br /&gt; STORO TN&lt;br /&gt;Via C. Battisti 50&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">623</td>
+			<td style="text-align:center">9</td>
+			<td style="text-align:center">09/01/27 18:00</td>
+			<td title="SOCIETA' SPORTIVA ALDENO"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/2955/Loghi/LogoS2955.jpg" alt="">ALDENO VOLLEY - DX ADIGE</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645241">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645241">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645241"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Centro Sp. Albere&lt;/b&gt;&lt;br /&gt;Aldeno ALDENO TN&lt;br /&gt;Via delle Albere n&#176;1 &lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr class="dispari">
+			<td style="text-align:center">632</td>
+			<td style="text-align:center">10</td>
+			<td style="text-align:center">16/01/27 18:00</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td title="C9 ARCO RIVA"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/825/Loghi/LogoS825.png" alt="">C9 GCA ASSICURAZIONI SRL</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645250">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645250">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645250"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Palazz. Com. Palastor&lt;/b&gt;&lt;br /&gt; STORO TN&lt;br /&gt;Via C. Battisti 50&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">637</td>
+			<td style="text-align:center">11</td>
+			<td style="text-align:center">23/01/27 20:30</td>
+			<td title="ARGENTARIO PALLAVOLO"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/826/Loghi/LogoS826.png" alt="">ARGENTARIO VOLLEI JUNIOR</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645255">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645255">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645255"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;PAL. Sc. Media Argentario&lt;/b&gt;&lt;br /&gt;COGNOLA TRENTO TN&lt;br /&gt;Via Ponte Alto 1&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr class="dispari">
+			<td style="text-align:center">642</td>
+			<td style="text-align:center">12</td>
+			<td style="text-align:center">06/02/27 18:00</td>
+			<td title="LAKES LEVICO-CALDONAZZO VOLLEY"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/833/Loghi/LogoS833.png" alt="">LAKES LEVICO-CALDONAZZO</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645260">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645260">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645260"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Palazz. Dello Sport&lt;/b&gt;&lt;br /&gt; CALDONAZZO TN&lt;br /&gt;Via Marconi 9&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">647</td>
+			<td style="text-align:center">13</td>
+			<td style="text-align:center">30/01/27 18:00</td>
+			<td title="PALLAVOLO  LIZZANA"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/821/Loghi/LogoS821.png" alt="">P.LIZZANA FARMACIA THALER</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645265">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645265">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645265"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Pal. Sc. Elem. Guella&lt;/b&gt;&lt;br /&gt;LIZZANA ROVERETO TN&lt;br /&gt;Via Piave&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr class="dispari">
+			<td style="text-align:center">650</td>
+			<td style="text-align:center">14</td>
+			<td style="text-align:center">20/02/27 18:00</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td title="VOLANO VOLLEY A.S.D."><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/828/Loghi/LogoS828.jpg" alt="">VOLANO VOLLEY</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645268">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645268">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645268"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Palazz. Com. Palastor&lt;/b&gt;&lt;br /&gt; STORO TN&lt;br /&gt;Via C. Battisti 50&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">655</td>
+			<td style="text-align:center">15</td>
+			<td style="text-align:center">27/02/27 20:30</td>
+			<td title="SAN GIORGIO"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/835/Loghi/LogoS835.jpg" alt="">CENTRO STUDI WALTER</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645273">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645273">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645273"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;PAL. Piedicastello Vela &lt;/b&gt;&lt;br /&gt; TRENTO TN&lt;br /&gt;Via Doss Trento 23/B&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr class="dispari">
+			<td style="text-align:center">659</td>
+			<td style="text-align:center">16</td>
+			<td style="text-align:center">06/03/27 18:00</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td title="FIEMME FASSA"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/theme/newb/no-image.png" alt="">FFV PASTIFICIO FELICETTI </td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645277">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645277">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645277"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Palazz. Com. Palastor&lt;/b&gt;&lt;br /&gt; STORO TN&lt;br /&gt;Via C. Battisti 50&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">664</td>
+			<td style="text-align:center">17</td>
+			<td style="text-align:center">13/03/27 20:30</td>
+			<td title="DOLASIANA"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/834/Loghi/LogoS834.jpg" alt="">USD DOLASIANA</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645282">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645282">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645282"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Centro Civico Meano&lt;/b&gt;&lt;br /&gt; TRENTO TN&lt;br /&gt;Via delle Sugarine 26&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr class="dispari">
+			<td style="text-align:center">668</td>
+			<td style="text-align:center">18</td>
+			<td style="text-align:center">20/03/27 18:00</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td title="SOCIETA' SPORTIVA ALDENO"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/2955/Loghi/LogoS2955.jpg" alt="">ALDENO VOLLEY - DX ADIGE</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645286">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645286">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645286"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Palazz. Com. Palastor&lt;/b&gt;&lt;br /&gt; STORO TN&lt;br /&gt;Via C. Battisti 50&lt;/p&gt;" />
+			</td>
+		</tr>
+	</tbody>
+</table>
+<table class="tbl tbl-risultati">
+	<caption>3^ Divisione F - Prima Fase<a style="margin-left:10px;" target="_blank" title="Aggiungi calendario gare a Google Calendar" href="https://www.portalefipav.net/CalendarioGare.asp?c=D4E1D4C9CDDBCDDBC5C9DDEBD1998481978690" class="link_calendar"><img style="width:20px;" src="/img/icone/calendar.png" alt="calendario"></a><a href="/classifica.aspx?CId=93534" class="link_classifica"><img src="/img/classifica.gif" alt="classifica"></a></caption>
+	<thead>
+		<tr>
+			<th style="width:40px;">Gara</th>
+			<th style="width:20px;" title="Giornata">G</th>
+			<th style="width:90px;">Data / ora</th>
+			<th style="width:320px;">Squadra casa</th>
+			<th style="width:320px;">Squadra ospite</th>
+			<th style="width:50px;" title="Risultato">Risul.</th>
+			<th class="isMobile">Dettagli</th>
+			<th style="width:40px;">&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="text-align:center">673</td>
+			<td style="text-align:center">1</td>
+			<td style="text-align:center">18/10/26 18:00</td>
+			<td title="ANAUNE PALLAVOLO"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/820/Loghi/LogoS820.JPG" alt="">ANAUNE CR VAL DI SOLE</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645291">3 - 0</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645291"><span class="parziali">25-22</span><span class="parziali">25-17</span><span class="parziali">25-17</span></td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645291"><img src="/img/statogara/stato5.png" class="tips ris-img" alt="statogara" title="gara omologata" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Pal. Polo Scolastico&lt;/b&gt;&lt;br /&gt; CLES TN&lt;br /&gt;Via 4 Novembre 35&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr class="dispari">
+			<td style="text-align:center">678</td>
+			<td style="text-align:center">2</td>
+			<td style="text-align:center">24/10/26 18:00</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td title="VAL DI CEMBRA VOLLEY"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/theme/newb/no-image.png" alt="">CEMBRA VOLLEY NARDON IMP</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645296">2 - 3</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645296"><span class="parziali">14-25</span><span class="parziali">16-25</span><span class="parziali">25-22</span><span class="parziali">25-18</span><span class="parziali">7-15</span></td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645296"><img src="/img/statogara/stato5.png" class="tips ris-img" alt="statogara" title="gara omologata" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Palazz. Com. Palastor&lt;/b&gt;&lt;br /&gt; STORO TN&lt;br /&gt;Via C. Battisti 50&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">683</td>
+			<td style="text-align:center">3</td>
+			<td style="text-align:center">01/11/26 18:00</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td title="TREMALZO"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/1205/Loghi/LogoS1205.jpg" alt="">TREMALZO</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645301">0 - 3</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645301"><span class="parziali">10-25</span><span class="parziali">22-25</span><span class="parziali">14-25</span></td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645301"><img src="/img/statogara/stato5.png" class="tips ris-img" alt="statogara" title="gara omologata" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Palazz. Com. Palastor&lt;/b&gt;&lt;br /&gt; STORO TN&lt;br /&gt;Via C. Battisti 50&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr class="dispari">
+			<td style="text-align:center">689</td>
+			<td style="text-align:center">4</td>
+			<td style="text-align:center">07/11/26 18:00</td>
+			<td title="VOLLEY VALLE DEI LAGHI"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/1228/Loghi/LogoS1228.jpg" alt="">VOLLEY VALLE DEI LAGHI</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645307">3 - 1</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645307"><span class="parziali">25-21</span><span class="parziali">26-24</span><span class="parziali">22-25</span><span class="parziali">25-21</span></td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645307"><img src="/img/statogara/stato5.png" class="tips ris-img" alt="statogara" title="gara omologata" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Pal. Sc. Media Madruzzo&lt;/b&gt;&lt;br /&gt; CAVEDINE TN&lt;br /&gt;Via Don Negri&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">694</td>
+			<td style="text-align:center">5</td>
+			<td style="text-align:center">15/11/26 18:00</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td title="PALLAVOLO PINE' A.S.D."><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/1229/Loghi/LogoS1229.jpg" alt="">PALLAVOLO PINE'</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645312">0 - 3</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645312"><span class="parziali">18-25</span><span class="parziali">20-25</span><span class="parziali">14-25</span></td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645312"><img src="/img/statogara/stato5.png" class="tips ris-img" alt="statogara" title="gara omologata" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Palazz. Com. Palastor&lt;/b&gt;&lt;br /&gt; STORO TN&lt;br /&gt;Via C. Battisti 50&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr class="dispari">
+			<td style="text-align:center">700</td>
+			<td style="text-align:center">6</td>
+			<td style="text-align:center">21/11/26 20:30</td>
+			<td title="US LAVIS"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/823/Loghi/LogoS823.jpg" alt="">U.S.LAVIS</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645318">3 - 0</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645318"><span class="parziali">25-16</span><span class="parziali">25-13</span><span class="parziali">25-17</span></td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645318"><img src="/img/statogara/stato5.png" class="tips ris-img" alt="statogara" title="gara omologata" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Pal. Polo Scolastico&lt;/b&gt;&lt;br /&gt; LAVIS TN&lt;br /&gt;Via Degasperi 18&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">710</td>
+			<td style="text-align:center">8</td>
+			<td style="text-align:center">06/12/26 18:00</td>
+			<td title="DOLASIANA"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/834/Loghi/LogoS834.jpg" alt="">USD DOLASIANA</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645328">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645328">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645328"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Centro Civico Meano&lt;/b&gt;&lt;br /&gt; TRENTO TN&lt;br /&gt;Via delle Sugarine 26&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr class="dispari">
+			<td style="text-align:center">715</td>
+			<td style="text-align:center">9</td>
+			<td style="text-align:center">13/12/26 18:00</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td title="CASTEL STENICO"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/1191/Loghi/LogoS1191.jpg" alt="">CASTEL STENICO VOLLEY</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645333">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645333">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645333"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Palazz. Com. Palastor&lt;/b&gt;&lt;br /&gt; STORO TN&lt;br /&gt;Via C. Battisti 50&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">721</td>
+			<td style="text-align:center">10</td>
+			<td style="text-align:center">17/12/26 20:30</td>
+			<td title="ASD PREDAIA"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/829/Loghi/LogoS829.jpg" alt="">ASD PREDAIA 3A DIVISIONE</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645339">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645339">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645339"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Pal. Scol. B. Sicher&lt;/b&gt;&lt;br /&gt;Coredo COREDO TN&lt;br /&gt;Via delle Scuole 6&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr class="dispari">
+			<td style="text-align:center">726</td>
+			<td style="text-align:center">11</td>
+			<td style="text-align:center">10/01/27 18:00</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td title="CUS TRENTO"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/5422/Loghi/LogoS5422.jpg" alt="">CUS TRENTO</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645344">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645344">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645344"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Palazz. Com. Palastor&lt;/b&gt;&lt;br /&gt; STORO TN&lt;br /&gt;Via C. Battisti 50&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">728</td>
+			<td style="text-align:center">12</td>
+			<td style="text-align:center">17/01/27 18:00</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td title="ANAUNE PALLAVOLO"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/820/Loghi/LogoS820.JPG" alt="">ANAUNE CR VAL DI SOLE</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645346">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645346">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645346"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Palazz. Com. Palastor&lt;/b&gt;&lt;br /&gt; STORO TN&lt;br /&gt;Via C. Battisti 50&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr class="dispari">
+			<td style="text-align:center">733</td>
+			<td style="text-align:center">13</td>
+			<td style="text-align:center">23/01/27 20:30</td>
+			<td title="VAL DI CEMBRA VOLLEY"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/theme/newb/no-image.png" alt="">CEMBRA VOLLEY NARDON IMP</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645351">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645351">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645351"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Pal. Ist. Comp. Cembra&lt;/b&gt;&lt;br /&gt; CEMBRA TN&lt;br /&gt;Via Negritelle&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">738</td>
+			<td style="text-align:center">14</td>
+			<td style="text-align:center">30/01/27 18:00</td>
+			<td title="TREMALZO"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/1205/Loghi/LogoS1205.jpg" alt="">TREMALZO</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645356">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645356">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645356"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Palazz. Dello Sport&lt;/b&gt;&lt;br /&gt; TIARNO DI SOTTO TN&lt;br /&gt;Via alla Sega&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr class="dispari">
+			<td style="text-align:center">744</td>
+			<td style="text-align:center">15</td>
+			<td style="text-align:center">07/02/27 18:00</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td title="VOLLEY VALLE DEI LAGHI"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/1228/Loghi/LogoS1228.jpg" alt="">VOLLEY VALLE DEI LAGHI</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645362">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645362">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645362"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Palazz. Com. Palastor&lt;/b&gt;&lt;br /&gt; STORO TN&lt;br /&gt;Via C. Battisti 50&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">749</td>
+			<td style="text-align:center">16</td>
+			<td style="text-align:center">11/02/27 20:30</td>
+			<td title="PALLAVOLO PINE' A.S.D."><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/1229/Loghi/LogoS1229.jpg" alt="">PALLAVOLO PINE'</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645367">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645367">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645367"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Pal. Sc. Media&lt;/b&gt;&lt;br /&gt; BASELGA DI PINE&#39; TN&lt;br /&gt;Via del XXVI Maggio&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr class="dispari">
+			<td style="text-align:center">755</td>
+			<td style="text-align:center">17</td>
+			<td style="text-align:center">21/02/27 18:00</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td title="US LAVIS"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/823/Loghi/LogoS823.jpg" alt="">U.S.LAVIS</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645373">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645373">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645373"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Palazz. Com. Palastor&lt;/b&gt;&lt;br /&gt; STORO TN&lt;br /&gt;Via C. Battisti 50&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">765</td>
+			<td style="text-align:center">19</td>
+			<td style="text-align:center">07/03/27 18:00</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td title="DOLASIANA"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/834/Loghi/LogoS834.jpg" alt="">USD DOLASIANA</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645383">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645383">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645383"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Palazz. Com. Palastor&lt;/b&gt;&lt;br /&gt; STORO TN&lt;br /&gt;Via C. Battisti 50&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr class="dispari">
+			<td style="text-align:center">770</td>
+			<td style="text-align:center">20</td>
+			<td style="text-align:center">14/03/27 18:00</td>
+			<td title="CASTEL STENICO"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/1191/Loghi/LogoS1191.jpg" alt="">CASTEL STENICO VOLLEY</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645388">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645388">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645388"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Pal. Comunale &lt;/b&gt;&lt;br /&gt; STENICO TN&lt;br /&gt;Via Vecia n&#176; 5&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">776</td>
+			<td style="text-align:center">21</td>
+			<td style="text-align:center">21/03/27 18:00</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td title="ASD PREDAIA"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/829/Loghi/LogoS829.jpg" alt="">ASD PREDAIA 3A DIVISIONE</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645394">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645394">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645394"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Palazz. Com. Palastor&lt;/b&gt;&lt;br /&gt; STORO TN&lt;br /&gt;Via C. Battisti 50&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr class="dispari">
+			<td style="text-align:center">781</td>
+			<td style="text-align:center">22</td>
+			<td style="text-align:center">23/03/27 21:00</td>
+			<td title="CUS TRENTO"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/5422/Loghi/LogoS5422.jpg" alt="">CUS TRENTO</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131645399">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131645399">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131645399"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;PAL. LICEO &quot;PRATI&quot;&lt;/b&gt;&lt;br /&gt; TRENTO TN&lt;br /&gt;L.go Pigarelli - P.za Garzetti&lt;/p&gt;" />
+			</td>
+		</tr>
+	</tbody>
+</table>
+<table class="tbl tbl-risultati">
+	<caption>U14/F - 1a Fase Girone B<a style="margin-left:10px;" target="_blank" title="Aggiungi calendario gare a Google Calendar" href="https://www.portalefipav.net/CalendarioGare.asp?c=AE9BAEB3B7A1B7A1BFB3A791ABE3FEFBEDFBEE" class="link_calendar"><img style="width:20px;" src="/img/icone/calendar.png" alt="calendario"></a><a onclick="window.open('/classifica.aspx?tipo=avulsa&CId=93540','_blank','height=800,width=1000');" href="#" class="link_classificas"><img src="/img/classifica-avulsa.gif" alt="classifica"></a><a href="/classifica.aspx?CId=93540" class="link_classifica"><img src="/img/classifica.gif" alt="classifica"></a></caption>
+	<thead>
+		<tr>
+			<th style="width:40px;">Gara</th>
+			<th style="width:20px;" title="Giornata">G</th>
+			<th style="width:90px;">Data / ora</th>
+			<th style="width:320px;">Squadra casa</th>
+			<th style="width:320px;">Squadra ospite</th>
+			<th style="width:50px;" title="Risultato">Risul.</th>
+			<th class="isMobile">Dettagli</th>
+			<th style="width:40px;">&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="text-align:center">1451</td>
+			<td style="text-align:center">1</td>
+			<td style="text-align:center">25/10/26 11:00</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td title="FORNACE VOLLEY"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/1288/Loghi/LogoS1288.jpg" alt="">FORNACE VOLLEY 2013-14-15</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131648359">3 - 1</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131648359"><span class="parziali">25-22</span><span class="parziali">17-25</span><span class="parziali">25-18</span><span class="parziali">25-20</span></td>
+			<td style="text-align:center">
+				<span id="StatoGara_131648359"><img src="/img/statogara/stato5.png" class="tips ris-img" alt="statogara" title="gara omologata" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Palazz. Com. Palastor&lt;/b&gt;&lt;br /&gt; STORO TN&lt;br /&gt;Via C. Battisti 50&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr class="dispari">
+			<td style="text-align:center">1453</td>
+			<td style="text-align:center">2</td>
+			<td style="text-align:center">01/11/26 11:00</td>
+			<td title="ATA TRENTO VOLLEY"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/842/Loghi/LogoS842.JPG" alt="">WALLIANCE ATA </td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131648361">3 - 0</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131648361"><span class="parziali">25-19</span><span class="parziali">25-9</span><span class="parziali">25-8</span></td>
+			<td style="text-align:center">
+				<span id="StatoGara_131648361"><img src="/img/statogara/stato5.png" class="tips ris-img" alt="statogara" title="gara omologata" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;PAL. Sc. Media Bresadola&lt;/b&gt;&lt;br /&gt; TRENTO TN&lt;br /&gt;Via Esterle 1&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">1455</td>
+			<td style="text-align:center">3</td>
+			<td style="text-align:center">15/11/26 11:00</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td title="PALLAVOLO PINE' A.S.D."><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/1229/Loghi/LogoS1229.jpg" alt="">PALLAVOLO PINE'</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131648363">3 - 0</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131648363"><span class="parziali">25-18</span><span class="parziali">25-20</span><span class="parziali">25-15</span></td>
+			<td style="text-align:center">
+				<span id="StatoGara_131648363"><img src="/img/statogara/stato5.png" class="tips ris-img" alt="statogara" title="gara omologata" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Palazz. Com. Palastor&lt;/b&gt;&lt;br /&gt; STORO TN&lt;br /&gt;Via C. Battisti 50&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr class="dispari">
+			<td style="text-align:center">1459</td>
+			<td style="text-align:center">4</td>
+			<td style="text-align:center">22/11/26 11:00</td>
+			<td title="BRENTA VOLLEY"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/1192/Loghi/LogoS1192.jpg" alt="">INNOVA VOLLEY TIONE</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131648367">3 - 0</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131648367"><span class="parziali">25-18</span><span class="parziali">25-15</span><span class="parziali">25-22</span></td>
+			<td style="text-align:center">
+				<span id="StatoGara_131648367"><img src="/img/statogara/stato5.png" class="tips ris-img" alt="statogara" title="gara omologata" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Ist. Comp. Tione di Trento&lt;/b&gt;&lt;br /&gt; TIONE DI TRENTO TN&lt;br /&gt;Via Circonvallazione n&#176; 44&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">1463</td>
+			<td style="text-align:center">5</td>
+			<td style="text-align:center">06/12/26 11:00</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td title="BASSA VALLAGARINA"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/831/Loghi/LogoS831.png" alt="">BASSA VALLAGARINA VOLLEY</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131648371">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131648371">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131648371"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Palazz. Com. Palastor&lt;/b&gt;&lt;br /&gt; STORO TN&lt;br /&gt;Via C. Battisti 50&lt;/p&gt;" />
+			</td>
+		</tr>
+		<tr class="dispari">
+			<td style="text-align:center">1469</td>
+			<td style="text-align:center">7</td>
+			<td style="text-align:center">20/12/26 11:00</td>
+			<td title="ARGENTARIO PALLAVOLO"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/826/Loghi/LogoS826.png" alt="">BANCA PTS ARG.PROG.VOLLEI</td>
+			<td title="TEAMVOLLEY C8"><img style="object-fit: contain;width: 40px;height: 40px;border: 1px solid #b7b7b7;padding: 3px;margin: 4px;" src="/mngArea/Societa/img/844/Loghi/LogoS844.jpg" alt="">TEAM VOLLEY C8</td>
+			<td style="text-align:center" class="risultato" id="Risultato_131648377">-</td>
+			<td class="risultato-dettagli isMobile" id="Parziali_131648377">&nbsp;</td>
+			<td style="text-align:center">
+				<span id="StatoGara_131648377"><img src="/img/statogara/stato0.png" class="tips ris-img" alt="statogara" title="da disputare" /></span>
+				<img src="/img/info_16.png" class="tips ris-img" alt="info" title="
+&lt;p&gt;&lt;b&gt;Pal. Sc. Crispi&lt;/b&gt;&lt;br /&gt; TRENTO TN&lt;br /&gt;Via S. G. Bosco 8&lt;/p&gt;" />
+			</td>
+		</tr>
+	</tbody>
+</table>
+<script type="text/javascript">
+	window.addEvent('domready', function () {
+		var tip = new Tips('.tips', { className: 'risultati-tips' });
+		$$('.link_classifica').cerabox({ displayTitle: false, group:false });
+	});
+</script>
+	</div>
+	</div>
+		</div>
+	</div>
+	</div>
+	<div id="layout-area5" style="width:100%">
+		<div class="col col-4">
+			
+<div id="BoxId_9101" name="BoxId_9101" class="box box-4">
+	<div class=""style="background: transparent;"><div class="box-text"><div style="text-align:center"><br />
+Copyright FIPAV - Comitato Regionale Trentino - Via della Malpensada, 84 - 38123 Trento - Tel. 04611860390 - email:&nbsp;<a href="mailto:segreteria@fipav.tn.it">segreteria@fipav.tn.it</a>&nbsp; - Web Design <a href="http://www.newb.it">Newb.it</a>&nbsp;- <a href="/pagina.aspx?PId=13164">Privacy &amp; Cookie</a><br />
+<br />
+<span style="font-size:11px">La Societ&agrave; e la Federazione Italiana Pallavolo si impegnano attivamente a proteggere i suoi dati dall&#39;accesso non autorizzato attraverso il web scraping. Qualsiasi tentativo di acquisire informazioni senza autorizzazione sar&agrave; considerato una violazione delle politiche di tutela dei dati e dei dati personali e sar&agrave; perseguito legalmente.</span></div>
+</div>
+	</div>
+</div>
+		</div>
+	</div>
+</div>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108082847-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-108082847-1');
+</script>
+
+    <p class="pw-credito" style="text-align:center;margin:5px auto 15px;font-size:11px;">Sito realizzato con <a href="https://www.powersport.it" target="_blank">PowerSPORT</a> - gestionale per societ&agrave; sportive</p>
+
+<!--Pagina generata in 00:00:00.4536702 secondi-->
+</body>
+</html>
+
